@@ -4,9 +4,6 @@ server:
 spring:
   application:
     name: user-service
-  config:
-    import: optional:configserver:http://localhost:8888
-
   datasource:
     url: jdbc:postgresql://localhost:5432/airsync_users
     username: postgres
@@ -20,11 +17,6 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
 
 jwt:
   secret: airsync-super-secret-key-thomson-2024-make-this-long
