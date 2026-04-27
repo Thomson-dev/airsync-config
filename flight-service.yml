@@ -4,9 +4,6 @@ server:
 spring:
   application:
     name: flight-service
-  config:
-    import: optional:configserver:http://localhost:8888
-
   datasource:
     url: jdbc:postgresql://localhost:5432/airsync_flights
     username: postgres
@@ -21,7 +18,4 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+
